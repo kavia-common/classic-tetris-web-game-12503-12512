@@ -1,0 +1,123 @@
+.tetrisRoot {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0e7ef 0%, #f9fafb 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #111827;
+  padding-top: 32px;
+  box-sizing: border-box;
+}
+.headerBar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 95vw;
+  max-width: 640px;
+  margin-bottom: 18px;
+  font-size: 1.18rem;
+  font-weight: 500;
+}
+.logo {
+  color: #2563EB;
+  font-size: 1.77rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  text-shadow: 0 3px 18px rgba(37,99,235,.08);
+}
+.subtitle {
+  color: #F59E0B;
+  font-size: 1.02rem;
+  margin-left: 1.8em;
+}
+.mainLayout {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(37,99,235,.06);
+  border-radius: 22px;
+  padding: 32px 24px;
+  margin-bottom: 30px;
+  gap: 36px;
+}
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-width: 132px;
+  gap: 18px;
+}
+.pausedOverlay, .gameOverOverlay {
+  position: absolute;
+  top: 36%;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.36rem;
+  font-weight: 800;
+  color: #2563EB;
+  text-shadow: 0 3px 18px rgba(37,99,235,.20);
+  background: rgba(255,255,255,0.78);
+  min-height: 35vh;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 90;
+}
+.gameOverOverlay {
+  color: #EF4444;
+  flex-direction: column;
+  font-size: 2.1rem;
+}
+.finalScore {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: #2563EB;
+}
+.restartHint {
+  font-size: 1rem;
+  color: #111827BB;
+}
+.footer {
+  padding: 12px 0 12px 0;
+  font-size: .97em;
+  text-align: center;
+  color: #2563ebd5;
+  width: 100vw;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+/* Responsive: stack main layout and controls for mobile */
+@media (max-width: 900px) {
+  .mainLayout {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 6px;
+    max-width: 95vw;
+    gap: 16px;
+  }
+  .headerBar {
+    width: 97vw;
+    max-width: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .footer {
+    font-size: 0.87em;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .mainLayout {
+    border-radius: 12px;
+    padding: 7vw 2vw;
+    gap: 10px;
+  }
+}

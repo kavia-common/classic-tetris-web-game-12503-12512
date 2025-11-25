@@ -1,0 +1,51 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #2563eb09;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.12);
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #2563EB20;
+  margin: 0 10px;
+}
+.row { display: flex; }
+.cell {
+  width: 30px; height: 30px;
+  background: #f9fafb;
+  border: 1.5px solid #d1e3f2;
+  box-sizing: border-box;
+  border-radius: 7px;
+  margin: 0px 0.3px;
+  box-shadow: 0 1px 4px #2563eb0c, 0 0.5px 0.2px #f59e0b08;
+  transition: background 0.17s;
+}
+.active {
+  filter: brightness(1.07) drop-shadow(0 0 6px #2563eb34);
+  box-shadow: 0 6px 20px #2563eb27;
+  border: 2px solid #F59E0B70;
+}
+.clearing {
+  animation: flash 0.18s alternate 3;
+  background: #f59e0b90!important;
+}
+.ghost {
+  filter: blur(1.2px) brightness(1.05);
+  border: 1.5px dashed #2563EB77;
+}
+
+.gameover .cell {
+  filter: grayscale(0.81);
+  opacity: 0.60;
+}
+@keyframes flash {
+  from { background: #f59e0b90; }
+  to   { background: #fffde6; }
+}
+
+/* Responsive grid for mobile/tablet */
+@media (max-width: 900px) {
+  .cell { width: 20px; height: 20px; border-radius: 4px;}
+  .board { border-radius: 8px;}
+}

@@ -1,0 +1,16 @@
+.soundToggle {
+  background: #38bdf8;
+  color: #ffffff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.22em;
+  padding: 7px 13px;
+  cursor: pointer;
+  margin-left: 9px;
+  margin-bottom: 2px;
+  transition: background .13s;
+  box-shadow: 0 1.2px 9px #38bdf81b;
+}
+.soundToggle:hover {
+  background: #0ea5e9;
+}
